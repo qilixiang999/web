@@ -1,0 +1,47 @@
+@charset "utf-8";
+body{
+    background-image: url(../images/chunse4.jpg);
+    font-size: 14px;
+}
+
+#loginForm{
+    width: 380px;
+    height: 230px;
+    background-color: beige;
+    margin: 200px auto;
+    padding-top: 30px;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+}
+
+#loginForm p{
+    text-indent: 45px;
+}
+
+#userName,
+#password,
+#vcode{
+    height: 30px;
+    border: 1px solid #ccc;
+    text-indent: 24px;
+}
+
+#userName{
+    width: 280px;
+    background-image: url(../images/chunse5.jpg);
+    background-repeat: no-repeat;
+    background-position: 2px center;
+}
+
+#password{
+    width: 280px;
+    background-image: url(../images/chunse5.jpg);
+    background-repeat: no-repeat;
+    background-position: 2px center;
+}
+
+#vcode{
+    background-image: url(../images/chunse5.jpg);
+    background-repeat: no-repeat;
+    background-position: 2px center;
+}

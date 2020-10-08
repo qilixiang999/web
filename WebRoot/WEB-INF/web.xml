@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" baixmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<!-- <web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"> -->
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>CreateVerifyImageController</servlet-name>
+		<servlet-class>controller.CreateVerifyImageController</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>GetDownloadListController</servlet-name>
+		<servlet-class>controller.GetDownloadListController</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>LoginController</servlet-name>
+		<servlet-class>controller.LoginController</servlet-class>
+		<init-param>
+			<param-name>driver</param-name>
+			<param-value>org.git.mm.mysql.Driver</param-value>
+		</init-param>
+		<init-param>
+			<param-name>url</param-name>
+			<param-value>jdbc:mysql://localhost:3306/exercise</param-value>
+		</init-param>
+		<init-param>
+			<param-name>user</param-name>
+			<param-value>root</param-value>
+		</init-param>
+		<init-param>
+			<param-name>password</param-name>
+			<param-value>enen7657</param-value>
+		</init-param>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>DownloadController</servlet-name>
+		<servlet-class>controller.DownloadController</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>LogoutController</servlet-name>
+		<servlet-class>controller.LogoutController</servlet-class>
+	</servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ResourceController</servlet-name>
+    <servlet-class>controller.ResourceController</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UsersController</servlet-name>
+    <servlet-class>controller.UsersController</servlet-class>
+  </servlet>
+
+
+	<filter>
+		<filter-name>FilterTest1</filter-name>
+		<filter-class>filter.FilterTest1</filter-class>
+	</filter>
+	<filter>
+		<filter-name>AutologinFilter</filter-name>
+		<filter-class>filter.AutologinFilter</filter-class>
+	</filter>
+
+
+
+
+	<filter-mapping>
+		<filter-name>AutologinFilter</filter-name>
+		<url-pattern>/main.jsp</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>FilterTest1</filter-name>
+		<url-pattern>/download.jsp</url-pattern>
+				<url-pattern>/servlet/GetDownloadListController</url-pattern>
+				<url-pattern>/servlet/UsersController</url-pattern>
+				<url-pattern>/servlet/ResourceController</url-pattern>
+	</filter-mapping>
+	<servlet-mapping>
+		<servlet-name>CreateVerifyImageController</servlet-name>
+		<url-pattern>/servlet/CreateVerifyImageController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetDownloadListController</servlet-name>
+		<url-pattern>/servlet/GetDownloadListController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoginController</servlet-name>
+		<url-pattern>/servlet/LoginController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DownloadController</servlet-name>
+		<url-pattern>/servlet/DownloadController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LogoutController</servlet-name>
+		<url-pattern>/servlet/LogoutController</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ResourceController</servlet-name>
+    <url-pattern>/servlet/ResourceController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UsersController</servlet-name>
+    <url-pattern>/servlet/UsersController</url-pattern>
+  </servlet-mapping>
+
+</web-app>
