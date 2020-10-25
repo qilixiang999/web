@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>用户注册</title>
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/register.js"></script>
+  <!--      <script type="text/javascript">
+            $(function(){
+                $("#userName").blur(function(){
+                var t=$(this).val();
+                var rule=/^[A-Za-z][a-zA-Z0-9]{3,14}$/;
+                var result=rule.test(t.trim());
+                if(t==""||t==null){
+                    $("#userNameError").text("用户名不能为空");
+                }else if(!result){
+                    $("#userNameError").text("格式错误");
+                }
+                else if(t!=null&&result){
+                    $.ajax({
+            type: "post",
+            url: "ajaxUserCheck.do",
+            data: {username:t},
+            dataType: "json",
+            success: function (response) {
+                if(response.code==1){
+                    $("#userNameError").text(response.info);
+                }else{
+                    $("#userNameError").text("okokokokok");
+                }
+            }
+        });
+                  
+                }else{
+                    $("#userNameError").text("");
+                }
+
+            })
+            })
+        </script> -->
+    </head>
+    <body>
+        <div id="registerFrom">
+            <div>
+                <h3>账号注册</h3>
+               <a href="login.html" ali>已有账号，请登录</a>
+            </div>
+            <p><input id="userName" name="userName" type="text" placeholder="用户名"/>
+                <p><span  id="userNameError" style="color: red;"></span></p>
+            </p>
+            <p><input id="name" name="name" type="text" placeholder="真实姓名"/>
+                <p><span id="nameError" style="color: red;"></span></p>
+            </p>
+            <p><input id="email" name="email" type="text" placeholder="邮箱"/>
+                <p><span id="emailError" style="color: red;"></span></p>
+            </p>
+            <p><select id="province" name="provinceCode">
+                <option value="">请选择省份</option>
+            </select>
+            <span id="provinceError" style="color: red;"></span>
+        </p>
+        <p><select id="city" name="cityCode">
+            <option value="">请选择城市</option>
+        </select>
+        <span id="cityError" style="color: red;"></span>
+        </p>
+        <p><input id="password" name="password" type="password" placeholder="密码" />
+            <p>  <span id="passwordError" style="color: red;"></span> </p> 
+           </p>
+           <p><input id="passwordEnd" name="passwordEnd" type="password" placeholder="确认密码" />
+            <p>  <span id="passwordEndError" style="color: red;"></span> </p> 
+           </p>
+           <p>
+            <input id="btLogin" onclick="jqAjaxRegister()" type="button" value="注&nbsp;&nbsp;册" />
+            <span class="error" id="checkError" style="color: red;"></span>
+        </p>
+        </div>
+    </body>
+</html>
